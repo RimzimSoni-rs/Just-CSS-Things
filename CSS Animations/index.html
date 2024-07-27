@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" >
+    <title>Animation practice</title>
+    <style>
+        html,body{
+            width: 100%; 
+            height: 100%;
+            margin:0;
+            overflow: hidden;
+
+        }
+        div {
+            width: 100%;
+
+        }
+        .all{
+            position: relative;
+        }
+        .sky{
+            
+            height: 40%;
+            background-color: skyblue;
+        }
+        .grass{
+            
+            height: 30%;
+            background-color:rgba(28, 149, 17, 0.785);
+        }
+        .road{
+           
+            height: 40%;
+            background-color:rgba(128, 128, 128, 0.992) ;
+            box-sizing: border-box;
+            border-top: 4px solid grey;
+            border-bottom:5px  solid grey;
+        }
+        .lines{
+            position: absolute;
+           top:35%;
+            height: 0;
+            border:3px dashed white;
+        }
+        img{
+            width: 100px;
+        }
+        .car{
+            position: absolute;
+            top:-40px;
+            left:0px;
+            animation-name: drive;
+            animation-duration: 8s;
+            animation-delay: 1s;
+         
+        }
+
+        .bus{
+            position: absolute;
+            top: 70px;
+            left: 0px;
+            animation-name: drive;
+            animation-delay: 2s;
+            animation-duration: 6s;
+            
+        }
+       
+        
+@keyframes drive{
+    from{
+        transform:translateX(0px)
+    }
+    to{
+        transform:translateX(1300px)
+    }
+}
+    </style>
+</head>
+<body>
+    <div class="sky all"></div>
+    <div class="grass all"></div>
+    <div class="road all">
+        <div class="lines"></div>
+        <img src="Images/redCar.png" class="car">
+        <img src="Images/yellowBus.png" class="bus">
+        
+
+    </div>
+
+    
+</body>
+</html>
