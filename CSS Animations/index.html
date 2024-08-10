@@ -24,11 +24,76 @@
             height: 40%;
             background-color: skyblue;
         }
+        .birds{
+            
+            display: flex;
+            justify-content: space-evenly;
+           
+        }
+        .d1 img{
+            width: 30px;
+        }
+        .img1{
+            animation-name: bird;
+            animation-duration: 10s;
+            animation-timing-function: ease-in-out;
+        
+
+        }
+        .img2{
+            margin-top: 50%;
+            animation-name: bird2;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-delay: 2s;
+          
+            
+        }
+        .img3{
+              margin-top: 4%;
+            animation-name: bird2;
+            animation-duration: 10s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 1;
+            animation-fill-mode: forwards;
+          
+            
+        }
         .grass{
             
             height: 30%;
             background-color:rgba(28, 149, 17, 0.785);
+            display: flex;
+            
         }
+        .flower{
+          width: 100px;
+          height: 100px;
+        }
+        .flowertype1 {
+          
+            display: flex;
+            justify-content:space-between;
+          
+        }
+        .flowertype1 img{
+            width: 40px;
+        }
+        .flower{
+
+            position: relative;
+            top: -32px;
+            width: 30px;
+            display: inline-block;
+            animation: flowerAni 1s  ease-in-out infinite;
+            animation-direction: alternate-reverse;
+        }
+        .flowertype2{
+            position: absolute;
+            width: 50px;
+        }
+    
         .road{
            
             height: 40%;
@@ -51,8 +116,9 @@
             top:-40px;
             left:0px;
             animation-name: drive;
-            animation-duration: 8s;
+            animation-duration: 4s;
             animation-delay: 1s;
+            animation-iteration-count: infinite;
          
         }
 
@@ -61,10 +127,12 @@
             top: 70px;
             left: 0px;
             animation-name: drive;
-            animation-delay: 2s;
-            animation-duration: 6s;
+            animation-duration: 7s;
+            animation-iteration-count: infinite;
+            animation-timing-function: linear;
             
         }
+
        
         
 @keyframes drive{
@@ -74,12 +142,101 @@
     to{
         transform:translateX(1300px)
     }
+
 }
+@keyframes bird{
+    0%{
+        transform:translateX(0px);
+    }
+      20%{  
+        transform: translate(50px,50px);
+      }        
+    
+    40%{
+        transform: translate(100px,50px) ;
+    }
+
+    60%{
+        transform:translateX(220px);
+    }
+    80%{
+        transform:translate(300px);
+
+    }
+    100%{
+        transform: translateX(400px);
+    }
+    
+
+
+}
+@keyframes bird2{
+    0%{
+        transform:translate(0px) ;
+    }
+    50%{
+        transform:translate(100px) ;
+    }
+    100%{
+        transform:translate(400px,-100px);
+    }
+
+}
+
+@keyframes bird3{
+    0%{
+        transform:translate(0px) ;
+    }
+    25%{
+        transform:translate(100px) ;
+    }
+    75%{
+        transform: translateY(150px);
+    }
+    100%{
+        transform:translate(400px);
+    }
+
+}
+@keyframes flowerAni {
+    from{
+        transform: scale(0px)
+    }
+    to{
+        transform: scale(1.2);
+    }
+   
+  
+  }
     </style>
 </head>
 <body>
-    <div class="sky all"></div>
-    <div class="grass all"></div>
+    <div class="sky all">
+        <div class="birds">
+        <div class="img1 d1"><img src="Images/bird1.png"></div>
+        <div class="img2 d1"><img src="Images/bird2.png"></div>
+       <div class="img3 d1"> <img src="Images/bird3.png"></div>
+    </div>
+    </div>
+    <div class="grass all">
+        <div class="flowertype1">
+    
+            <div class="flower "><img src="Images/flower.png"></div>
+            <div class="flower "><img src="Images/flower.png"></div>
+            <div class="flower "><img src="Images/flower.png"></div>
+            <div class="flower "><img src="Images/flower.png"></div>
+            <div class="flower "><img src="Images/flower.png"></div>
+            <div class="flower "><img src="Images/flower.png"></div>
+                    </div>   
+                    <div class="flowertype2">
+                        <img src="Images/pinkflower.png">
+                        <img src="Images/pinkflower.png">
+                        <img src="Images/pinkflower.png">
+                    </div>
+
+           
+
+    </div>
     <div class="road all">
         <div class="lines"></div>
         <img src="Images/redCar.png" class="car">
